@@ -242,49 +242,429 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-    <link rel="stylesheet" href="/styles.css">
 
-    <style id="zappy-dropdown-submenu-styles">
-      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
-      /* Base styles for dropdown submenus - parent must be positioned */
-      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
-      /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
-      /* CRITICAL: Desktop hover styles to show dropdown */
-      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Submenu item styling */
-      .sub-menu li { list-style: none; margin: 0; padding: 0; }
-      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
-      .sub-menu a:hover { background-color: #f5f5f5; }
-      /* RTL (Hebrew/Arabic) dropdown positioning */
-      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
-      /* Desktop: show submenu on Menu Group hover */
-      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Menu Group title styling */
-      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
-      
-      /* ========== MOBILE SUBMENU STYLES ========== */
-      @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
-        /* Disable hover behavior on mobile */
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
-        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
-        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
-        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
-        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; }
-        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
-      }
-      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
-    </style>
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state */
+              .sub-menu.mobile-expanded {
+                max-height: 500px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout for link + toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+              }
+              
+              /* Parent link - takes most space, allows navigation */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+              }
+              
+              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+                display: none !important;
+                visibility: hidden !important;
+              }
+              
+              /* Toggle arrow button - separate clickable area */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: 44px !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                flex-shrink: 0 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+                  
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+    <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-widget-visibility">
       #mic-access-tool-general-button, .mic-access-tool-general-button,
@@ -302,10 +682,10 @@
       <div class="search-wrapper">
         <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
         <button class="search-submit" id="mobile-search-submit" title="חיפוש">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         </button>
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
@@ -315,16 +695,16 @@
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
     <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </button>
   
   <button class="phone-header-btn" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   </button>
   
@@ -335,28 +715,25 @@
       </a>
     </div>
     
-    <ul class="nav-menu" id="navMenu">
-
-    <li class="menu-item-has-children zappy-products-dropdown">
+    <ul class="nav-menu" id="navMenu"><li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
         קטלוג
         
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"></path>
+          <path d="M6 9l6 6 6-6"/>
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
         <li><a href="/products">כל המוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
-    </li>
-  <li><a href="/standards">תקנים ועמידות</a></li><li><a href="/contact">צור קשר / בקשת הצעת מחיר</a></li><li><a href="/about" class="nav-link">אודות</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    </li><li><a href="/about" class="nav-link">אודות</a><ul class="sub-menu"><li><a href="/standards">תקנים ועמידות</a></li></ul></li><li><a href="/contact">צור קשר / בקשת הצעת מחיר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
     <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
     </button>
     <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div>
     
     
   </div>
@@ -384,10 +761,10 @@
       <div class="standards-page-intro-item">
         <div class="standards-page-intro-icon-wrapper">
           <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 4C16 4 12 8 12 12C12 14.2091 13.7909 16 16 16C18.2091 16 20 14.2091 20 12C20 8 16 4 16 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M16 16V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path d="M8 20C8 20 10 18 12 18C14 18 14 20 16 20C18 20 18 18 20 18C22 18 24 20 24 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M8 26C8 26 10 24 12 24C14 24 14 26 16 26C18 26 18 24 20 24C22 24 24 26 24 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16 4C16 4 12 8 12 12C12 14.2091 13.7909 16 16 16C18.2091 16 20 14.2091 20 12C20 8 16 4 16 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 16V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 20C8 20 10 18 12 18C14 18 14 20 16 20C18 20 18 18 20 18C22 18 24 20 24 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 26C8 26 10 24 12 24C14 24 14 26 16 26C18 26 18 24 20 24C22 24 24 26 24 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="standards-page-intro-item-title">מחזורי טמפרטורה</h3>
@@ -397,9 +774,9 @@
       <div class="standards-page-intro-item">
         <div class="standards-page-intro-icon-wrapper">
           <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="currentColor" stroke-width="2"></path>
-            <path d="M16 10V16L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            <circle cx="16" cy="16" r="2" fill="currentColor"></circle>
+            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 10V16L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="16" r="2" fill="currentColor"/>
           </svg>
         </div>
         <h3 class="standards-page-intro-item-title">מגע כימי</h3>
@@ -409,12 +786,12 @@
       <div class="standards-page-intro-item">
         <div class="standards-page-intro-icon-wrapper">
           <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"></rect>
-            <path d="M12 8V6C12 4.89543 12.8954 4 14 4H18C19.1046 4 20 4.89543 20 6V8" stroke="currentColor" stroke-width="2"></path>
-            <path d="M10 14H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path d="M10 18H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <circle cx="22" cy="22" r="6" fill="currentColor"></circle>
-            <path d="M20 22L21.5 23.5L24 21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect x="6" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8V6C12 4.89543 12.8954 4 14 4H18C19.1046 4 20 4.89543 20 6V8" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 14H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 18H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="22" cy="22" r="6" fill="currentColor"/>
+            <path d="M20 22L21.5 23.5L24 21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="standards-page-intro-item-title">עמידות מכנית</h3>
@@ -426,56 +803,56 @@
   <div class="standards-page-intro-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 24" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <g>
-        <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="36" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="60" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="84" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="108" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="132" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="156" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="180" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="204" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="228" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="252" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="276" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="300" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="324" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="348" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="372" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="396" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="420" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="444" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="468" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="492" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="516" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="540" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="564" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="588" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="612" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="636" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="660" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="684" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="708" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="732" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="756" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="780" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="804" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="828" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="852" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="876" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="900" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="924" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="948" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="972" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="996" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1020" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1044" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1068" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1092" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1116" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1140" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1164" cy="12" r="1.5" fill="currentColor"></circle>
-        <circle cx="1188" cy="12" r="1.5" fill="currentColor"></circle>
+        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="36" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="60" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="84" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="108" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="132" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="156" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="180" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="204" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="228" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="252" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="276" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="300" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="324" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="348" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="372" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="396" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="420" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="444" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="468" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="492" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="516" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="540" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="564" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="588" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="612" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="636" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="660" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="684" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="708" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="732" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="756" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="780" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="804" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="828" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="852" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="876" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="900" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="924" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="948" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="972" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="996" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1020" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1044" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1068" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1092" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1116" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1140" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1164" cy="12" r="1.5" fill="currentColor"/>
+        <circle cx="1188" cy="12" r="1.5" fill="currentColor"/>
       </g>
     </svg>
   </div>
@@ -569,7 +946,7 @@
   <!-- Bottom Divider (Angled Cut) -->
   <div class="standards-table-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,100 L0,30 L1200,70 L1200,100 Z" fill="var(--bg-light)"></path>
+      <path d="M0,100 L0,30 L1200,70 L1200,100 Z" fill="var(--bg-light)"/>
     </svg>
   </div>
 </section>
@@ -615,12 +992,12 @@
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="standards-diagrams-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#F3F5F7;stop-opacity:1"></stop>
-          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1"></stop>
+          <stop offset="0%" style="stop-color:#F3F5F7;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1"/>
         </linearGradient>
       </defs>
-      <path d="M0,60 L0,20 L1200,20 L1200,60 Z" fill="url(#standards-diagrams-gradient)"></path>
-      <line x1="0" y1="20" x2="1200" y2="20" stroke="#0B7285" stroke-width="1" opacity="0.3"></line>
+      <path d="M0,60 L0,20 L1200,20 L1200,60 Z" fill="url(#standards-diagrams-gradient)"/>
+      <line x1="0" y1="20" x2="1200" y2="20" stroke="#0B7285" stroke-width="1" opacity="0.3"/>
     </svg>
   </div>
 </section>
@@ -637,11 +1014,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">כיצד בוחרים מדבקות לפי סוג המשטח?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>בחירת המדבקה הנכונה תלויה בחומר המשטח: זכוכית, פלסטיק (פוליפרופילן, פוליאתילן, פוליסטירן), מתכת או קרטון. לכל משטח יש דרישות הדבקה שונות – למשל, משטחי זכוכית דורשים דבק חזק יותר, בעוד משטחי פוליפרופילן דורשים דבק מיוחד עם אנרגיית משטח נמוכה. אנו ממליצים לספק לנו דוגמת משטח או לתאר את החומר בפירוט, ונתאים את סוג הדבק והחומר בהתאם.</p>
         </div>
       </div>
@@ -650,11 +1027,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">כיצד מאמתים עמידות כימית של המדבקות?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>אנו בוחנים את עמידות המדבקות מול מגוון חומרים כימיים נפוצים במעבדות: אלכוהול (אתנול, איזופרופנול), אצטון, חומצות מינרליות, בסיסים, ממיסים אורגניים ועוד. הבדיקה כוללת חשיפה ממושכת (24-72 שעות) בטמפרטורת חדר ובטמפרטורות קיצוניות. לפי הצורך, אנו יכולים לספק דוח בדיקה או להמליץ על חומר ספציפי שעבר תקינה כימית מול החומרים הרלוונטיים לתהליך שלכם.</p>
         </div>
       </div>
@@ -663,11 +1040,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">מהם שיקולי מחזור טמפרטורות?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>מדבקות מעבדתיות רבות חשופות למחזורי הקפאה-הפשרה, אוטוקלב או תנורי חימום. חשוב לבחור חומר שעומד בטווח הטמפרטורות הרלוונטי: מדבקות קריוגניות עמידות עד -196°C (חנקן נוזלי), מדבקות לאוטוקלב עמידות ב-121°C למשך 20 דקות, ומדבקות לתנורים עמידות עד 150°C. מחזורי טמפרטורה חוזרים עלולים לגרום להתרחבות והתכווצות של הדבק והחומר, לכן אנו ממליצים על מבחן פיילוט במעבדה לפני הזמנה גדולה.</p>
         </div>
       </div>
@@ -676,11 +1053,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">אילו שיטות הדפסה זמינות ומה הקריאוּת?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>אנו תומכים בהדפסה תרמית ישירה (Direct Thermal) והדפסה בטרנספר תרמי (Thermal Transfer) עם ריבון שעווה, שעווה-רזין או רזין מלא. הדפסה תרמית ישירה מתאימה ליישומים קצרי טווח, בעוד הדפסת טרנספר תרמי עם ריבון רזין מספקת עמידות מקסימלית לחומרים כימיים ולשחיקה. הקריאוּת תלויה בגודל הגופן, ברזולוציית המדפסת (300 או 600 DPI) ובניגודיות בין הטקסט לרקע. אנו ממליצים על גופן מינימלי של 6pt לטקסט רגיל ו-4pt לברקודים קטנים, בהתאם לרזולוציה.</p>
         </div>
       </div>
@@ -689,11 +1066,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">מהו משך זמן האחסון המומלץ למדבקות?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>מדבקות שלא בשימוש צריכות להישמר בתנאים יבשים וקרירים (15-25°C, לחות יחסית מתחת ל-60%) הרחק מאור שמש ישיר וממקורות חום. רוב המדבקות המעבדתיות שומרות על איכות ההדבקה למשך 12-24 חודשים בתנאי אחסון מתאימים. לאחר תקופה זו, הדבק עלול להתייבש או להחליש. אנו ממליצים לסמן את תאריך הייצור ולבדוק את איכות ההדבקה לפני שימוש אם המדבקות אוחסנו למעלה משנה.</p>
         </div>
       </div>
@@ -702,11 +1079,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">אילו פרוטוקולי ניקוי מומלצים למדבקות?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>ניקוי מדבקות מעבדתיות צריך להיעשות בעדינות כדי לא לפגוע בהדפס או בהדבקה. מומלץ להשתמש במטלית רכה לחה עם אלכוהול 70% או מים וסבון עדין, ולנגב בתנועות עדינות ללא שפשוף חזק. הימנעו משימוש בממיסים חזקים (אצטון, תינר) על המדבקה עצמה, אלא אם היא תוכננה במיוחד לעמידות כימית גבוהה. לאחר הניקוי, יש לייבש את המדבקה במגבת נייר נקייה.</p>
         </div>
       </div>
@@ -715,11 +1092,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">אילו פרטים צריך לספק כדי לקבל הצעת מחיר?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>כדי להכין הצעת מחיר מדויקת, אנו צריכים את הפרטים הבאים: (1) מידות המדבקה (רוחב × גובה במילימטרים), (2) כמות המדבקות הנדרשת, (3) סוג המשטח (זכוכית, פלסטיק, מתכת וכו'), (4) תנאי הסביבה (טמפרטורה, חשיפה לכימיקלים, לחות), (5) שיטת ההדפסה (תרמית ישירה או טרנספר תרמי), (6) תוכן ההדפסה (טקסט, ברקוד, לוגו), ו-(7) לוח זמנים לאספקה. ככל שהפרטים מדויקים יותר, כך נוכל להציע פתרון מותאם ומחיר תחרותי.</p>
         </div>
       </div>
@@ -728,11 +1105,11 @@
         <button class="standards-faq-question" type="button" aria-expanded="false">
           <span class="standards-faq-question-text">האם ניתן לקבל דוגמאות לפני הזמנה גדולה?</span>
           <svg class="standards-faq-icon" data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path class="standards-faq-icon-horizontal" d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path class="standards-faq-icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
-        <div class="standards-faq-answer" hidden="">
+        <div class="standards-faq-answer" hidden>
           <p>בהחלט! אנו ממליצים בחום לבצע בדיקת דוגמה לפני הזמנה גדולה, במיוחד אם מדובר בסוג חומר חדש או בתנאי סביבה מאתגרים. אנו יכולים לספק דוגמאות של מדבקות מודפסות או ריקות לבדיקה במעבדה שלכם. הדוגמאות מאפשרות לכם לבדוק את איכות ההדבקה, עמידות ההדפס, קריאוּת הברקוד והתאמה לתהליכי העבודה שלכם. צרו איתנו קשר ונשלח אליכם דוגמאות תוך מספר ימים.</p>
         </div>
       </div>
@@ -741,7 +1118,7 @@
 
   <div class="standards-faq-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,30 Q100,28 200,32 T400,28 Q500,32 600,30 T800,32 Q900,28 1000,30 T1200,32 L1200,60 Z" fill="var(--bg-dark)"></path>
+      <path d="M0,60 L0,30 Q100,28 200,32 T400,28 Q500,32 600,30 T800,32 Q900,28 1000,30 T1200,32 L1200,60 Z" fill="var(--bg-dark)"/>
     </svg>
   </div>
 </section>

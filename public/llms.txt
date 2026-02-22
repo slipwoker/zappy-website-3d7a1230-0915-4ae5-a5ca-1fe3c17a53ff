@@ -4,50 +4,50 @@
 
 ## Pages
 
-### בית
+### Page
 https://example.com
 
-### תקנים ועמידות
-https://example.com/standards
-
-### צור קשר / בקשת הצעת מחיר
-https://example.com/contact
-
-### Products
+### קטלוג
 https://example.com/products
 המוצרים שלנו - טכנומרק
-
-### Cart
-https://example.com/cart
-עגלת הקניות שלך
-
-### Checkout
-https://example.com/checkout
-תשלום
-
-### Login
-https://example.com/login
-התחברות לקוחות
-
-### Account
-https://example.com/account
-החשבון שלי
-
-### Order Success
-https://example.com/order-success
-תודה על ההזמנה
-
-### Product Detail
-https://example.com/product/:slug
-פרטי המוצר - טכנומרק
-
-### Category
-https://example.com/category/:slug
-מוצרים - טכנומרק
 
 ### אודות טכנומרק
 https://example.com/about
 טכנומרק - אודות טכנומרק
+
+### Page
+https://example.com/standards
+
+### עגלת קניות
+https://example.com/cart
+עגלת הקניות שלך
+
+### תשלום
+https://example.com/checkout
+תשלום
+
+### התחברות
+https://example.com/login
+התחברות לקוחות
+
+### החשבון שלי
+https://example.com/account
+החשבון שלי
+
+### ההזמנה התקבלה!
+https://example.com/order-success
+תודה על ההזמנה
+
+### פרטי המוצר
+https://example.com/product/:slug
+פרטי המוצר - טכנומרק
+
+### מוצרים
+https://example.com/category/:slug
+מוצרים - טכנומרק
+
+### Page
+https://example.com/contact
 
 ## Legal & Policy
 
