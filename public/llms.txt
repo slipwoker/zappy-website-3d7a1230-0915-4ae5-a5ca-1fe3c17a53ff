@@ -45,6 +45,10 @@ https://example.com/product/:slug
 https://example.com/category/:slug
 מוצרים - טכנומרק
 
+### אודות טכנומרק
+https://example.com/about
+טכנומרק - אודות טכנומרק
+
 ## Legal & Policy
 
 ### Privacy Policy
