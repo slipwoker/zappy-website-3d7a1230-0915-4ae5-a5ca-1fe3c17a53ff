@@ -7,10 +7,6 @@
 ### Page
 https://example.com
 
-### קטלוג
-https://example.com/products
-המוצרים שלנו - טכנומרק
-
 ### אודות טכנומרק
 https://example.com/about
 טכנומרק - אודות טכנומרק
@@ -46,8 +42,15 @@ https://example.com/product/:slug
 https://example.com/category/:slug
 מוצרים - טכנומרק
 
+### קטלוג
+https://example.com/products
+המוצרים שלנו - טכנומרק
+
 ### Page
 https://example.com/contact
+
+### Page
+https://example.com/stickers
 
 ## Legal & Policy
 
