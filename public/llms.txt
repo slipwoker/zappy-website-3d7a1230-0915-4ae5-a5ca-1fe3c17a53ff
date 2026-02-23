@@ -7,6 +7,9 @@
 ### Page
 https://example.com
 
+### Page
+https://example.com/stickers
+
 ### אודות טכנומרק
 https://example.com/about
 טכנומרק - אודות טכנומרק
@@ -51,9 +54,6 @@ https://example.com/menu-group-1771854650391
 
 ### Page
 https://example.com/contact
-
-### Page
-https://example.com/stickers
 
 ## Legal & Policy
 
