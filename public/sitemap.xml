@@ -85,6 +85,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://example.com/menu-group-1776257640395</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://example.com/laboratory-specialist</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,12 +194,6 @@
   </url>
   <url>
     <loc>https://example.com/barcode-scanners</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://example.com/menu-group-1776257640395</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
