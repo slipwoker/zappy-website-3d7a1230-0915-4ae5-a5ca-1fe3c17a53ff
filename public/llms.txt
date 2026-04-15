@@ -11,9 +11,6 @@ https://example.com
 https://example.com/about
 טכנומרק - אודות טכנומרק
 
-### Page
-https://example.com/standards
-
 ### עגלת קניות
 https://example.com/cart
 עגלת הקניות שלך
