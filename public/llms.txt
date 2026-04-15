@@ -47,12 +47,6 @@ https://example.com/products
 המוצרים שלנו - טכנומרק
 
 ### Page
-https://example.com/label-printers
-
-### Page
-https://example.com/test-tube-labeling-printers
-
-### Page
 https://example.com/menu-group-1776258630806
 
 ### מדבקות קריוגניות
@@ -96,12 +90,6 @@ https://example.com/laboratory-markers
 
 ### Page
 https://example.com/stickers
-
-### Page
-https://example.com/printer-cartridges
-
-### Page
-https://example.com/barcode-scanners
 
 ### Page
 https://example.com/contact
