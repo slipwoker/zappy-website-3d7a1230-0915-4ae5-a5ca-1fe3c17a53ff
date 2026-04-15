@@ -46,17 +46,17 @@ https://example.com/category/:slug
 https://example.com/products
 המוצרים שלנו - טכנומרק
 
-### Page
+### מרכז הידע
 https://example.com/menu-group-1776258630806
 
-### מדבקות קריוגניות
+### Page
 https://example.com/products/cryogenic-labels
 
 ### Page
-https://example.com/contact
+https://example.com/price-quote
 
 ### Page
-https://example.com/price-quote
+https://example.com/contact
 
 ## Legal & Policy
 
