@@ -67,13 +67,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/stickers</loc>
+    <loc>https://example.com/laboratory-specialist</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/laboratory-specialist</loc>
+    <loc>https://example.com/new-page-1776253307207</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://example.com/stickers</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -47,10 +47,13 @@ https://example.com/products
 המוצרים שלנו - טכנומרק
 
 ### Page
-https://example.com/stickers
+https://example.com/laboratory-specialist
 
 ### Page
-https://example.com/laboratory-specialist
+https://example.com/new-page-1776253307207
+
+### Page
+https://example.com/stickers
 
 ### Page
 https://example.com/contact
