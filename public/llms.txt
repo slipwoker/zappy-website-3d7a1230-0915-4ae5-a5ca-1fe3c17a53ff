@@ -79,6 +79,9 @@ https://example.com/medical-stickers
 ### Page
 https://example.com/general-use-stickers
 
+### Page
+https://example.com/rfid-labels-and-tags
+
 ## Legal & Policy
 
 ### Privacy Policy
