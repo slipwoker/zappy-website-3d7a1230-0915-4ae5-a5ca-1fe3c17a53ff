@@ -73,12 +73,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/office-business-printers</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://example.com/test-tube-labeling-printers</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,12 +164,6 @@
   </url>
   <url>
     <loc>https://example.com/laboratory-markers</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://example.com/cable-label-printers</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
