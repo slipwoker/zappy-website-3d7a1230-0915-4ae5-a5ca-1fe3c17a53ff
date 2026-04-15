@@ -106,6 +106,12 @@ https://example.com/contact
 ### Page
 https://example.com/cable-label-printers
 
+### Page
+https://example.com/printer-cartridges
+
+### Page
+https://example.com/barcode-scanners
+
 ## Legal & Policy
 
 ### Privacy Policy
