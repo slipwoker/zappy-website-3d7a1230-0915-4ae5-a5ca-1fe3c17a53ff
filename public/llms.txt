@@ -55,11 +55,8 @@ https://example.com/office-business-printers
 ### Page
 https://example.com/test-tube-labeling-printers
 
-### Page
-https://example.com/menu-group-1776257640395
-
-### Page
-https://example.com/laboratory-specialist
+### מדבקות למעבדה
+https://example.com/laboratory-labels
 
 ### Page
 https://example.com/cryogenic-labels
