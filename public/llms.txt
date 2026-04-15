@@ -88,6 +88,12 @@ https://example.com/sovereigns
 ### Page
 https://example.com/contact
 
+### Page
+https://example.com/marking-and-sealing-films
+
+### Page
+https://example.com/laboratory-markers
+
 ## Legal & Policy
 
 ### Privacy Policy
