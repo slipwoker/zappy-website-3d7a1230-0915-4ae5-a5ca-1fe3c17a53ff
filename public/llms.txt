@@ -53,36 +53,6 @@ https://example.com/menu-group-1776258630806
 https://example.com/products/cryogenic-labels
 
 ### Page
-https://example.com/chemical-resistant-labels
-
-### Page
-https://example.com/autoclave-resistant-labels
-
-### Page
-https://example.com/heat-resistant-stickers
-
-### Page
-https://example.com/medical-stickers
-
-### Page
-https://example.com/general-use-stickers
-
-### Page
-https://example.com/rfid-labels-and-tags
-
-### Page
-https://example.com/labels
-
-### Page
-https://example.com/sovereigns
-
-### Page
-https://example.com/marking-and-sealing-films
-
-### Page
-https://example.com/laboratory-markers
-
-### Page
 https://example.com/contact
 
 ## Legal & Policy
