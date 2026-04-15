@@ -50,6 +50,9 @@ https://example.com/products
 https://example.com/laboratory-specialist
 
 ### Page
+https://example.com/chemical-resistant-labels
+
+### Page
 https://example.com/cryogenic-adhesive-labels
 
 ### Page
@@ -59,10 +62,10 @@ https://example.com/cryogenic-labels
 https://example.com/stickers
 
 ### Page
-https://example.com/contact
+https://example.com/deep-freeze-labels
 
 ### Page
-https://example.com/deep-freeze-labels
+https://example.com/contact
 
 ## Legal & Policy
 
