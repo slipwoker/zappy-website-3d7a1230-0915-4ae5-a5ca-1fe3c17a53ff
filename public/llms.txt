@@ -101,9 +101,6 @@ https://example.com/marking-and-sealing-films
 https://example.com/laboratory-markers
 
 ### Page
-https://example.com/contact
-
-### Page
 https://example.com/cable-label-printers
 
 ### Page
@@ -111,6 +108,12 @@ https://example.com/printer-cartridges
 
 ### Page
 https://example.com/barcode-scanners
+
+### Page
+https://example.com/menu-group-1776257640395
+
+### Page
+https://example.com/contact
 
 ## Legal & Policy
 
