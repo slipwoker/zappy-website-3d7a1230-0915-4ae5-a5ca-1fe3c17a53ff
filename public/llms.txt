@@ -55,6 +55,9 @@ https://example.com/products/cryogenic-labels
 ### Page
 https://example.com/contact
 
+### Page
+https://example.com/price-quote
+
 ## Legal & Policy
 
 ### Privacy Policy
