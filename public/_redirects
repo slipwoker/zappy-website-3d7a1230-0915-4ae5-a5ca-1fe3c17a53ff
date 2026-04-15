@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-04-15T13:09:21.709Z
+# Generated: 2026-04-15T13:13:06.231Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -17,21 +17,21 @@
 /products  /products.html  200!
 /label-printers  /label-printers.html  200!
 /test-tube-labeling-printers  /test-tube-labeling-printers.html  200!
-/laboratory-labels  /laboratory-labels.html  200!
+/menu-group-1776258630806  /menu-group-1776258630806.html  200!
 /cryogenic-labels  /cryogenic-labels.html  200!
-/stickers  /stickers.html  200!
-/cryogenic-adhesive-labels  /cryogenic-adhesive-labels.html  200!
-/deep-freeze-labels  /deep-freeze-labels.html  200!
-/chemical-resistant-labels  /chemical-resistant-labels.html  200!
-/autoclave-resistant-labels  /autoclave-resistant-labels.html  200!
-/heat-resistant-stickers  /heat-resistant-stickers.html  200!
-/medical-stickers  /medical-stickers.html  200!
-/general-use-stickers  /general-use-stickers.html  200!
-/rfid-labels-and-tags  /rfid-labels-and-tags.html  200!
-/labels  /labels.html  200!
-/sovereigns  /sovereigns.html  200!
-/marking-and-sealing-films  /marking-and-sealing-films.html  200!
 /laboratory-markers  /laboratory-markers.html  200!
+/marking-and-sealing-films  /marking-and-sealing-films.html  200!
+/sovereigns  /sovereigns.html  200!
+/labels  /labels.html  200!
+/rfid-labels-and-tags  /rfid-labels-and-tags.html  200!
+/general-use-stickers  /general-use-stickers.html  200!
+/medical-stickers  /medical-stickers.html  200!
+/heat-resistant-stickers  /heat-resistant-stickers.html  200!
+/autoclave-resistant-labels  /autoclave-resistant-labels.html  200!
+/chemical-resistant-labels  /chemical-resistant-labels.html  200!
+/deep-freeze-labels  /deep-freeze-labels.html  200!
+/cryogenic-adhesive-labels  /cryogenic-adhesive-labels.html  200!
+/stickers  /stickers.html  200!
 /printer-cartridges  /printer-cartridges.html  200!
 /barcode-scanners  /barcode-scanners.html  200!
 /contact  /contact.html  200!
