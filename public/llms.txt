@@ -52,6 +52,9 @@ https://example.com/contact
 ### Page
 https://example.com/stickers
 
+### Page
+https://example.com/laboratory-specialist
+
 ## Legal & Policy
 
 ### Privacy Policy
