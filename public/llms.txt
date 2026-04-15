@@ -50,22 +50,22 @@ https://example.com/products
 https://example.com/laboratory-specialist
 
 ### Page
-https://example.com/autoclave-resistant-labels
-
-### Page
-https://example.com/chemical-resistant-labels
-
-### Page
-https://example.com/cryogenic-adhesive-labels
-
-### Page
 https://example.com/cryogenic-labels
 
 ### Page
 https://example.com/stickers
 
 ### Page
+https://example.com/cryogenic-adhesive-labels
+
+### Page
 https://example.com/deep-freeze-labels
+
+### Page
+https://example.com/chemical-resistant-labels
+
+### Page
+https://example.com/autoclave-resistant-labels
 
 ### Page
 https://example.com/contact
