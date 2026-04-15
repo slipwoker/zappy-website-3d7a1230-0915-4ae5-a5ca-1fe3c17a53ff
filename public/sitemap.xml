@@ -109,12 +109,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://example.com/heat-resistant-stickers</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -136,6 +130,18 @@
     <loc>https://example.com/rfid-labels-and-tags</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://example.com/labels</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://example.com/contact</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

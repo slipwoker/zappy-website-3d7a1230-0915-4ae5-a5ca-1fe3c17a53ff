@@ -68,9 +68,6 @@ https://example.com/chemical-resistant-labels
 https://example.com/autoclave-resistant-labels
 
 ### Page
-https://example.com/contact
-
-### Page
 https://example.com/heat-resistant-stickers
 
 ### Page
@@ -81,6 +78,12 @@ https://example.com/general-use-stickers
 
 ### Page
 https://example.com/rfid-labels-and-tags
+
+### Page
+https://example.com/labels
+
+### Page
+https://example.com/contact
 
 ## Legal & Policy
 
