@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>מדיניות החזרות</title>
-    <meta name="description" content="מדיניות החזרת מוצרים - זכויותיכם להחזרה והחלפה בהתאם לחוק">
+    <title>Generated Website</title>
+    <meta name="description" content="">
     <meta name="keywords" content="">
     
     <!-- Favicons -->
@@ -218,11 +218,6 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="מדיניות החזרות">
-    <meta property="og:description" content="מדיניות החזרת מוצרים - זכויותיכם להחזרה והחלפה בהתאם לחוק">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="מדיניות החזרות">
-    <meta name="twitter:description" content="מדיניות החזרת מוצרים - זכויותיכם להחזרה והחלפה בהתאם לחוק">
     <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   
@@ -271,8 +266,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -286,13 +281,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover > .sub-menu {
+            li:has(.menu-group-title):hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -301,7 +296,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -354,9 +349,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover > .sub-menu,
-            nav li:hover > .sub-menu,
-            .navbar li:hover > .sub-menu {
+            .nav-menu li:hover &gt; .sub-menu,
+            nav li:hover &gt; .sub-menu,
+            .navbar li:hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -394,8 +389,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -409,8 +404,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -451,18 +446,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover > .sub-menu,
-              nav li:hover > .sub-menu,
-              .navbar li:hover > .sub-menu {
+              .nav-menu li:hover &gt; .sub-menu,
+              nav li:hover &gt; .sub-menu,
+              .navbar li:hover &gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li > .sub-menu.mobile-expanded,
-              nav li > .sub-menu.mobile-expanded,
-              .navbar li > .sub-menu.mobile-expanded {
+              .nav-menu li &gt; .sub-menu.mobile-expanded,
+              nav li &gt; .sub-menu.mobile-expanded,
+              .navbar li &gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -488,23 +483,23 @@
               }
               
               /* Parent link - takes most space, allows navigation */
-              .nav-menu li:has(.sub-menu) > a,
-              nav li:has(.sub-menu) > a,
-              .navbar li:has(.sub-menu) > a,
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
+              .nav-menu li:has(.sub-menu) &gt; a,
+              nav li:has(.sub-menu) &gt; a,
+              .navbar li:has(.sub-menu) &gt; a,
+              .nav-menu &gt; li &gt; .menu-group-title,
+              #navMenu &gt; li &gt; .menu-group-title {
                 flex: 1 !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
-              nav li:has(.sub-menu) > a [class*="chevron"],
-              nav li:has(.sub-menu) > a [class*="arrow"],
-              #navMenu li:has(.sub-menu) > a [class*="chevron"],
-              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -542,9 +537,9 @@
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) > .sub-menu,
-              nav li:has(.sub-menu) > .sub-menu,
-              .navbar li:has(.sub-menu) > .sub-menu {
+              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
+              nav li:has(.sub-menu) &gt; .sub-menu,
+              .navbar li:has(.sub-menu) &gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
@@ -564,10 +559,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth > 768) {
+                if (window.innerWidth &gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -590,7 +585,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -650,7 +645,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -694,9 +689,9 @@
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover > .sub-menu,
-      nav li:hover > .sub-menu,
-      .navbar li:hover > .sub-menu {
+      .nav-menu li:hover &gt; .sub-menu,
+      nav li:hover &gt; .sub-menu,
+      .navbar li:hover &gt; .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -728,7 +723,6 @@
         right: 0;
       }
     </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-widget-visibility">
@@ -742,15 +736,7 @@
 </head>
 <body>
 
-  <script>
-    window.ZAPPY_WEBSITE_ID = "3d7a1230-0915-4ae5-a5ca-1fe3c17a53ff";
-    // Preview pages are served by the Zappy server itself (localhost in dev), so use that base.
-    // Deployed sites are static and must call the public Zappy API (never localhost).
-    window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview'))
-      ? "https://api.zappy5.com"
-      : "https://api.zappy5.com";
-  </script>
-  
+
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
         <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
@@ -763,6 +749,8 @@
       </div>
       <div class="search-results" id="mobile-search-results"></div>
     </div>
+  
+<script>window.ZAPPY_WEBSITE_ID = "3d7a1230-0915-4ae5-a5ca-1fe3c17a53ff";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -809,7 +797,8 @@
     
   </div>
 </nav>
-<nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" dir="rtl">
+
+    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" dir="rtl">
       <div class="catalog-menu-container">
         <a href="/products" class="catalog-menu-item catalog-menu-all">כל המוצרים</a>
         <div class="catalog-menu-categories" id="zappy-category-links">
@@ -817,147 +806,27 @@
         </div>
       </div>
     </nav>
-  <main class="page-container ecommerce-page">
-    
-<section class="legal-page-content return-policy">
-  <div class="container">
-    <h1>מדיניות החזרת מוצרים</h1>
-    <p class="last-updated"><strong>עדכון אחרון:</strong> 9.4.2026</p>
-    
-    <p>טכנומרק מחויבת לשביעות רצון לקוחותיה. מדיניות זו מפרטת את זכויותיכם להחזרת מוצרים בהתאם לחוק הגנת הצרכן.</p>
-
-    <h2>1. זכות הביטול</h2>
-    <p>בהתאם לחוק הגנת הצרכן, עומדת לכם הזכות לבטל עסקה בתוך <strong>14 ימים</strong> מיום קבלת המוצר.</p>
-    <ul>
-      <li>לאזרחים ותיקים, עולים חדשים ואנשים עם מוגבלות - תקופת הביטול היא 4 חודשים</li>
-      <li>יש להחזיר את המוצר באריזתו המקורית</li>
-      <li>ההחזר הכספי יבוצע תוך 14 ימים מהודעת הביטול</li>
-    </ul>
-
-    <h2>2. מוצרים שלא ניתן להחזיר</h2>
-    <ul>
-      <li>מוצרי מזון פסידים</li>
-      <li>מוצרים שיוצרו במיוחד לפי הזמנה</li>
-      <li>תוכנות ותקליטורים שנפתחו</li>
-      <li>מוצרי היגיינה אישית שנפתחו</li>
-    </ul>
-
-    <h2>3. מוצר פגום</h2>
-    <p>במקרה של מוצר פגום או שונה מהמתואר, זכאים אתם להחזר מלא ללא דמי ביטול, כולל החזר דמי משלוח.</p>
-
-    <h2>4. יצירת קשר</h2>
-    <div class="contact-box">
-      <p>לביצוע החזרה או לשאלות:</p>
-      <p><strong>אימייל:</strong> <a href="mailto:[business_email]">[business_email]</a></p>
-      <p><strong>טלפון:</strong> <a href="tel:[business_phone]">[business_phone]</a></p>
-      <p><strong>כתובת:</strong> [business_address]</p>
-    </div>
-  </div>
-</section>
-  </main>
+  
+  
+  <main>
+      <section id="layout-1776253310498" class="py-16 md:py-24 bg-white layout-section zappy-removable" data-zappy-component="true" style="width: 100%; padding: 60px 0;">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">New Page</h1>
+          <p class="text-gray-600 text-lg">This page is ready for your content.</p>
+        </div>
+      </section>
+    </main>
+  
   <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/logo.webp" alt="טכנומרק" class="logo"><p class="footer-description">ספק מוביל של ציוד מעבדתי ומדעי מתקדם. מתמחים באספקת פתרונות איכותיים למעבדות מחקר, תעשייה ומוסדות אקדמיים.</p></div><div class="footer-section footer-links"><h3 class="footer-title">קישורים מהירים</h3><ul class="footer-menu"><li><a href="/standards">תקנים ועמידות</a></li><li><a href="/contact">צרו קשר</a></li></ul></div><div class="footer-section footer-contact"><h3 class="footer-title">יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:[business_email]">[business_email]</a></li><li><i class="fas fa-phone"></i><a href="tel:[business_phone]">[business_phone]</a></li><li><a href="/"><i class="fas fa-map-marker-alt"></i><span>[business_address]</span></a></li></ul></div><div class="footer-section footer-social"><h3 class="footer-title">עקבו אחרינו</h3><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></div></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאי שימוש</a><span class="separator">|</span>
             <a href="/return-policy" aria-label="מדיניות החזרות">
               מדיניות החזרות
             </a><span class="separator">|</span><a href="/accessibility">נגישות</a></div><div class="footer-copyright"><p>© 2026 טכנומרק. כל הזכויות שמורות.</p><a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a></div></div></div></footer>
   
-<div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-<aside class="cart-drawer rtl" id="cart-drawer" dir="rtl">
-  <div class="cart-drawer-header">
-    <h2>עגלת הקניות שלך</h2>
-    <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="סגור">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
-    </button>
-  </div>
-  <div class="cart-drawer-body" id="cart-drawer-items">
-    <div class="empty-cart">העגלה ריקה</div>
-  </div>
-  <div class="cart-drawer-footer">
-    <div class="cart-drawer-total">
-      <span>סה"כ:</span>
-      <span id="cart-drawer-total">₪0</span>
-    </div>
-    <a href="/checkout" class="cart-drawer-checkout">המשך לתשלום</a>
-  </div>
-</aside>
-  <script>
-  <!-- Search handling for e-commerce pages -->
-  (function() {
-    // Unified search function that works in both preview and deployed modes
-    function performSearch(query) {
-      if (query.length < 2) return;
-      
-      // Check if we're in preview mode (URL contains preview-fullscreen)
-      var isPreview = window.location.pathname.includes('preview-fullscreen');
-      
-      if (isPreview) {
-        // In preview mode, update the page parameter and add search
-        var url = new URL(window.location.href);
-        url.searchParams.set('page', '/products');
-        url.searchParams.set('search', query);
-        window.location.href = url.toString();
-      } else {
-        // In deployed mode, navigate to products with search
-        window.location.href = '/products?search=' + encodeURIComponent(query);
-      }
-    }
-    
-    // Handle navbar search input
-    var navSearchInput = document.querySelector('.nav-search-input');
-    if (navSearchInput) {
-      navSearchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          performSearch(this.value.trim());
-        }
-      });
-    }
-    
-    // Handle mobile search panel
-    var mobileSearchInput = document.getElementById('mobile-search-input');
-    var mobileSearchPanel = document.getElementById('mobile-search-panel');
-    var closeMobileSearch = document.getElementById('close-mobile-search');
-    var searchToggle = document.querySelector('.nav-search-toggle');
-    
-    // Open mobile search panel
-    if (searchToggle && mobileSearchPanel) {
-      searchToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        mobileSearchPanel.classList.add('active');
-        if (mobileSearchInput) {
-          setTimeout(function() { mobileSearchInput.focus(); }, 100);
-        }
-      });
-    }
-    
-    // Close mobile search panel
-    if (closeMobileSearch && mobileSearchPanel) {
-      closeMobileSearch.addEventListener('click', function() {
-        mobileSearchPanel.classList.remove('active');
-        if (mobileSearchInput) mobileSearchInput.value = '';
-      });
-    }
-    
-    // Handle Enter key on mobile search
-    if (mobileSearchInput) {
-      mobileSearchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          performSearch(this.value.trim());
-        }
-      });
-    }
-    
-    // Handle search query from URL on load
-    var urlParams = new URLSearchParams(window.location.search);
-    var searchQuery = urlParams.get('search');
-    if (searchQuery) {
-      if (navSearchInput) navSearchInput.value = searchQuery;
-      if (mobileSearchInput) mobileSearchInput.value = searchQuery;
-      console.log('[E-COMMERCE] Search query from URL:', searchQuery);
-    }
-  })();
-  </script>
+  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div data-integration="accessibility:toolbar"></div>
 
     <script src="/script.js"></script>
 
