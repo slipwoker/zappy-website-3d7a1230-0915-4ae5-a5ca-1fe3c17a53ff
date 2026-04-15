@@ -50,6 +50,9 @@ https://example.com/products
 https://example.com/laboratory-specialist
 
 ### Page
+https://example.com/autoclave-resistant-labels
+
+### Page
 https://example.com/chemical-resistant-labels
 
 ### Page
