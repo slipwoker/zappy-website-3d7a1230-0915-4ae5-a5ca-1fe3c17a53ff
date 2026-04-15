@@ -103,6 +103,9 @@ https://example.com/laboratory-markers
 ### Page
 https://example.com/contact
 
+### Page
+https://example.com/cable-label-printers
+
 ## Legal & Policy
 
 ### Privacy Policy
