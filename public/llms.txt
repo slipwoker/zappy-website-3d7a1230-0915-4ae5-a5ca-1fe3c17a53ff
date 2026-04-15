@@ -47,6 +47,15 @@ https://example.com/products
 המוצרים שלנו - טכנומרק
 
 ### Page
+https://example.com/label-printers
+
+### Page
+https://example.com/office-business-printers
+
+### Page
+https://example.com/test-tube-labeling-printers
+
+### Page
 https://example.com/laboratory-specialist
 
 ### Page
@@ -91,14 +100,8 @@ https://example.com/marking-and-sealing-films
 ### Page
 https://example.com/laboratory-markers
 
-### מדפסות למדבקות
-https://example.com/label-printers
-
 ### Page
 https://example.com/contact
-
-### Page
-https://example.com/office-business-printers
 
 ## Legal & Policy
 
