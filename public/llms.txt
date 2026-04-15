@@ -11,6 +11,9 @@ https://example.com
 https://example.com/about
 טכנומרק - אודות טכנומרק
 
+### Page
+https://example.com/standards
+
 ### עגלת קניות
 https://example.com/cart
 עגלת הקניות שלך
@@ -44,13 +47,61 @@ https://example.com/products
 המוצרים שלנו - טכנומרק
 
 ### Page
+https://example.com/label-printers
+
+### Page
+https://example.com/test-tube-labeling-printers
+
+### מדבקות למעבדה
 https://example.com/menu-group-1776258630806
 
 ### Page
-https://example.com/products/cryogenic-labels
+https://example.com/cryogenic-labels
 
 ### Page
-https://example.com/price-quote
+https://example.com/stickers
+
+### Page
+https://example.com/cryogenic-adhesive-labels
+
+### Page
+https://example.com/deep-freeze-labels
+
+### Page
+https://example.com/chemical-resistant-labels
+
+### Page
+https://example.com/autoclave-resistant-labels
+
+### Page
+https://example.com/heat-resistant-stickers
+
+### Page
+https://example.com/medical-stickers
+
+### Page
+https://example.com/general-use-stickers
+
+### Page
+https://example.com/rfid-labels-and-tags
+
+### Page
+https://example.com/labels
+
+### Page
+https://example.com/sovereigns
+
+### Page
+https://example.com/marking-and-sealing-films
+
+### Page
+https://example.com/laboratory-markers
+
+### Page
+https://example.com/printer-cartridges
+
+### Page
+https://example.com/barcode-scanners
 
 ### Page
 https://example.com/contact
