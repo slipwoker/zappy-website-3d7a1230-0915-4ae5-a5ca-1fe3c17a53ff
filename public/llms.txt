@@ -83,6 +83,9 @@ https://example.com/rfid-labels-and-tags
 https://example.com/labels
 
 ### Page
+https://example.com/sovereigns
+
+### Page
 https://example.com/contact
 
 ## Legal & Policy
