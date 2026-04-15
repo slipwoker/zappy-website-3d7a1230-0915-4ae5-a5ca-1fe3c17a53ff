@@ -70,6 +70,12 @@ https://example.com/autoclave-resistant-labels
 ### Page
 https://example.com/contact
 
+### Page
+https://example.com/heat-resistant-stickers
+
+### Page
+https://example.com/medical-stickers
+
 ## Legal & Policy
 
 ### Privacy Policy

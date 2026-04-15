@@ -115,6 +115,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://example.com/heat-resistant-stickers</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://example.com/medical-stickers</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://example.com/privacy</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
