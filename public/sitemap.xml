@@ -73,6 +73,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://example.com/cryogenic-adhesive-labels</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://example.com/cryogenic-labels</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -91,7 +97,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/cryogenic-adhesive-labels</loc>
+    <loc>https://example.com/deep-freeze-labels</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
