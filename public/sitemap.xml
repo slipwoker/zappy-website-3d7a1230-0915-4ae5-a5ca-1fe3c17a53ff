@@ -73,6 +73,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://example.com/https://docs.google.com/forms/d/e/1FAIpQLSe_3XdkOtYqsKOws50n9oRhJKDEKRwlz3xSNTbxDNs1REG4ug/viewform</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://example.com/privacy</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
