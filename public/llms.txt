@@ -14,7 +14,7 @@ https://example.com/about
 ### Page
 https://example.com/standards
 
-### הצעת מחיר
+### Page
 https://example.com/https://forms.gle/f8sE6HbVz698CEny5
 
 ### עגלת קניות
@@ -48,6 +48,9 @@ https://example.com/category/:slug
 ### מוצרים
 https://example.com/products
 המוצרים שלנו - טכנומרק
+
+### Page
+https://example.com/solutions
 
 ### Page
 https://example.com/contact
