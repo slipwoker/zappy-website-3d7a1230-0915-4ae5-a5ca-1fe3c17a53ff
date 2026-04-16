@@ -14,8 +14,8 @@ https://example.com/about
 ### Page
 https://example.com/standards
 
-### Page
-https://example.com/https://docs.google.com/forms/d/e/1FAIpQLSe_3XdkOtYqsKOws50n9oRhJKDEKRwlz3xSNTbxDNs1REG4ug/viewform
+### הצעת מחיר
+https://example.com/https://forms.gle/f8sE6HbVz698CEny5
 
 ### עגלת קניות
 https://example.com/cart
