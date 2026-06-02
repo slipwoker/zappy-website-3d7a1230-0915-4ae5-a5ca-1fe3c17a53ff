@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# טכנומרק — Generative Engine Optimization Map
+
+> A ציוד מעבדתי / מדעי business.
 
 ---
 
@@ -71,12 +73,53 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## Products
 
-## About Business
+**Total active products: 3**
+
+### סרט דימו סטנדרטי בחר רוחב וצבע
+https://example.com/product/srt-dymv-stndrty-bchr-rvchb-vtsba-pmq6qm
+- Price: 0.00 ILS
+- Availability: In stock
+- SKU: DXF
+- Description: סרט פוליאסטר באורך 7 מטר מסדרת D1. מיועד להדבקה על משטחים ישרים וחלקים. אינו מומלץ לשימוש בתנאי חוץ.
+- Image: https://example.com/assets/product-1776336674446-umxi2.webp
+
+### סרט דימו סטנדרטי ברוחב 19 מ"מ - בחר צבע
+https://example.com/product/srt-dymv-stndrty-brvchb-19-mm-bchr-tsba-iu837a
+- Price: 110.00 ILS
+- Availability: In stock
+- SKU: DXF19
+- Description: סרט פוליאסטר ברוחב 12 מ"מ ובאורך 7 מטר מסדרת D1. מיועד להדבקה על משטחים ישרים וחלקים. אינו מומלץ לשימוש בתנאי חוץ.
+- Image: https://example.com/assets/product-1776336672354-jsqhqj.webp
+
+### סרט דימו סטנדרטי ברוחב 12 מ"מ - בחר צבע
+https://example.com/product/srt-dymv-stndrty-brvchb-12-mm-bchr-tsba-418jav
+- Price: 88.00 ILS
+- Availability: In stock
+- SKU: DXF12
+- Description: סרט פוליאסטר ברוחב 12 מ"מ ובאורך 7 מטר מסדרת D1. מיועד להדבקה על משטחים ישרים וחלקים. אינו מומלץ לשימוש בתנאי חוץ.
+- Image: https://example.com/assets/product-1776336672342-i3li1.webp
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+## About טכנומרק
+טכנומרק is a business in the ציוד מעבדתי / מדעי industry.
+
+## Target Audience
+מעבדות מחקר
+
+## Industry
+ציוד מעבדתי / מדעי
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Products (JSON): https://example.com/products.json
+- Products (Google Merchant RSS): https://example.com/product-feed.xml

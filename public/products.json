@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org",
+  "generated_at": "2026-06-02T18:17:03.724Z",
+  "base_url": "https://example.com",
+  "currency": "ILS",
+  "count": 3,
+  "products": [
+    {
+      "id": "d168c876-1eb1-4f6f-b93f-152a37638b2a",
+      "slug": "srt-dymv-stndrty-bchr-rvchb-vtsba-pmq6qm",
+      "name": "סרט דימו סטנדרטי בחר רוחב וצבע",
+      "name_translations": {},
+      "description": "סרט פוליאסטר באורך 7  מטר מסדרת D1.<br><br> מיועד להדבקה על משטחים ישרים וחלקים. <br> אינו מומלץ לשימוש בתנאי חוץ.",
+      "short_description": null,
+      "sku": "DXF",
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1776336674446-umxi2.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/srt-dymv-stndrty-bchr-rvchb-vtsba-pmq6qm",
+      "categories": [],
+      "updated_at": "2026-04-16T12:39:19.883Z"
+    },
+    {
+      "id": "92fcdb1a-abd4-43ed-84c6-da985a09db17",
+      "slug": "srt-dymv-stndrty-brvchb-19-mm-bchr-tsba-iu837a",
+      "name": "סרט דימו סטנדרטי ברוחב 19 מ\"מ - בחר צבע",
+      "name_translations": {},
+      "description": "סרט פוליאסטר ברוחב 12 מ\"מ ובאורך 7  מטר מסדרת D1.<br><br> מיועד להדבקה על משטחים ישרים וחלקים. <br> אינו מומלץ לשימוש בתנאי חוץ.",
+      "short_description": null,
+      "sku": "DXF19",
+      "brand": null,
+      "price": 110,
+      "base_price": 110,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1776336672354-jsqhqj.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/srt-dymv-stndrty-brvchb-19-mm-bchr-tsba-iu837a",
+      "categories": [],
+      "updated_at": "2026-04-21T05:35:33.973Z"
+    },
+    {
+      "id": "702f1ee7-bd89-4b43-94d9-edc58d4a719a",
+      "slug": "srt-dymv-stndrty-brvchb-12-mm-bchr-tsba-418jav",
+      "name": "סרט דימו סטנדרטי ברוחב 12 מ\"מ - בחר צבע",
+      "name_translations": {},
+      "description": "סרט פוליאסטר ברוחב 12 מ\"מ ובאורך 7  מטר מסדרת D1.<br><br> מיועד להדבקה על משטחים ישרים וחלקים. <br> אינו מומלץ לשימוש בתנאי חוץ.",
+      "short_description": null,
+      "sku": "DXF12",
+      "brand": null,
+      "price": 88,
+      "base_price": 88,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://example.com/assets/product-1776336672342-i3li1.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://example.com/product/srt-dymv-stndrty-brvchb-12-mm-bchr-tsba-418jav",
+      "categories": [],
+      "updated_at": "2026-04-21T06:58:01.470Z"
+    }
+  ]
+}
